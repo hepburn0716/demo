@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+// 定义数组
+// 找陈松
+// indexOf lastIndexf
+// console.log(arr.indexOf("陈松"));
+// console.log(arr.lastIndexOf("陈松"));
+// console.log(arr.lastIndexOf("黄泽俊"));
+// console.log(arr.indexOf("3"));
+// console.log(arr.indexOf(3));
+/***
+ * 实现indexOf方法
+ * @arr 	原数组
+ * @item 	成员
+ * return 	索引值
+ *****/ 
+ // 查找当前arr数组成员的位置
+
+var arr = ['张三','李四','王五','小明','小红','3','5','张三','李四'];
+
+
+function indexOf(arr,item) {
+	for(var i = 0; i < arr.length; i++) {
+		// i表示索引值 arr[i]表示当前成员
+		if(item === arr[i]) {
+			return i
+		}
+	}
+	return -1;
+}
+console.log(indexOf(arr,'张三'));
+console.log(indexOf(arr,"3"));
+
+
+
+
+
+
+console.log(indexOf(arr,"小红"));
+console.log(indexOf(arr,"王五"));
+
+
+// 实例化对象的方法，通常定义在类的原型上
+// 如果方法存在，不用拓展了
+// 不存在，拓展
+// if(!Array.prototype.indexOf) {
+// 	Array.prototype.indexOf = function(item){
+// // 拓展方法
+// for(var i = 0; i < this.length;i++) {
+// 	if(item === this[i]) {
+// 		return i;
+// 	}
+//   }
+//   return -1;
+// }
+
+// }
+
+// console.log(arr);
+
+// console.log(arr,"3");
+
+</script>
+</body>
+</html>
